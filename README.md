@@ -1,4 +1,4 @@
-#Psychonauts Search - Let's Delivery Challenge
+<h1 align="center"> Psychonauts Search - Let's Delivery Challenge </h1>
 
 ## 🚀 Sobre
 Aplicação desenvolvida para o desafio a vaga de front end da Let's Delivery, construindo uma aplicação que consome os dados da API da Psychonauts, retornando para o usuário todos os personagens listados na API e suas respectivas informações. Além disso, ainda é possível que o usuário adicione os personagens em uma lista de favoritos e visualizar esta lista.
