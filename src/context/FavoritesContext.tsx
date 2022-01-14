@@ -34,10 +34,6 @@ export function FavoritesContextProvider( { children }: FavoritesContextProvider
     setFavorites( [...favorites, user])
   }
 
-  useEffect(() => {
-    console.log(favorites)
-  }, [favorites])
-
   return(
     <FavoritesContext.Provider value= { { addUserFavorites, favorites } }>
       {children}

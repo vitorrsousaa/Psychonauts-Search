@@ -33,16 +33,16 @@ export function SearchNameProvider( { children }: SearchNameProviderProps) {
 
   const [searchInput, setSearchInput] = useState('')
   const [dataBase, setDataBase] = useState<CharacterProps[]>([])
-  
  
   async function getUsers (name: string) {
-    const { data }: AxiosResponse = await api.get( name.length>0 ? `/characters?name=${name}` : `/characters` )
+    const {data}: AxiosResponse = await api.get( name.length>0 ? `/characters?name=${name}` : `/characters` )
     
     if(name.length > 0 ) {
       return setDataBase([data]) 
     } else {
       return setDataBase(data)
     }
+    
   }
 
   useEffect(() => {

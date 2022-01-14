@@ -30,7 +30,7 @@ export function Card( {data}: CardProps ) {
   return(
     <>
       {data.map((character: CharacterProps)=> (
-        <GridItem m='0 auto'>
+        <GridItem m='0 auto' key={character._id} >
           <VStack 
           bg='#ffffff' 
           align='center' 
@@ -38,7 +38,6 @@ export function Card( {data}: CardProps ) {
           h='350px' 
           justify='center' 
           spacing='20px'
-          key={character._id} 
         >
 
         <Avatar 
