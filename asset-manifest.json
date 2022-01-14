@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Psychonauts-Search/static/js/main.ec1d6057.js",
+    "main.js": "/Psychonauts-Search/static/js/main.b39a5d6d.js",
     "index.html": "/Psychonauts-Search/index.html",
-    "main.ec1d6057.js.map": "/Psychonauts-Search/static/js/main.ec1d6057.js.map"
+    "main.b39a5d6d.js.map": "/Psychonauts-Search/static/js/main.b39a5d6d.js.map"
   },
   "entrypoints": [
-    "static/js/main.ec1d6057.js"
+    "static/js/main.b39a5d6d.js"
   ]
 }
