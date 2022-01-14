@@ -1,13 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { Header } from "../components/Header";
-import { HomePage } from "./HomePage";
-import { FavoritesPage } from "./FavoritesPage";
+import { Home } from "../pages/Home";
 
 export function Router() {
   return(
     <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/favorites' element={<FavoritesPage />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/favorites' element={<Home />} />
     </Routes>
   )
 }

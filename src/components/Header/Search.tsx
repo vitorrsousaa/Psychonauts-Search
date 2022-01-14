@@ -1,18 +1,21 @@
-import { Input, InputGroup, InputRightAddon } from "@chakra-ui/react"
-import { ReactChild, ReactElement, ReactNode } from "react"
-import { Link } from "react-router-dom"
+import { Input, InputGroup, useBreakpointValue } from "@chakra-ui/react"
 import { useSearch } from "../../context/SearchContext"
 
 export const Search = () => {
 
   const { searchInput, setSearchInput } = useSearch()
 
+  const wideVersion = useBreakpointValue({
+    base: true,
+    lg: false
+  })
+
   return(
-    <InputGroup position='absolute' top='217'  size='lg' justifyContent='center'>        
+    <InputGroup position='absolute' top='217'  size={wideVersion ? 'sm' : 'lg'} justifyContent='center' p='0 2rem'>        
           <Input
-            placeholder='Digite o nome do seu personagem' 
-            w='600px' 
+            placeholder="Digite o nome do seu personagem"
             focusBorderColor="gray.500" 
+            maxWidth='600px'
             color='#706E7A' 
             bg='#ffffff'
             value={searchInput}

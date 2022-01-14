@@ -1,14 +1,16 @@
-import { Flex, Text, Icon, Box, Input, InputGroup, InputRightAddon } from "@chakra-ui/react";
+import { Flex, Text, Icon, Box } from "@chakra-ui/react";
 import { BsStarFill } from 'react-icons/bs';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search } from "./Search";
 
 
 
 export const Header = () => {
+
+  const { pathname } = useLocation()
+
   return(
     <Box
-      w='100vw'
       h='245px'
       bgGradient='linear(to-t, #00B4DB, #0083B0)'
       mb='90px'
@@ -33,6 +35,7 @@ export const Header = () => {
           <Flex 
             align='center' 
             mt='32px' 
+            mb='7px'
           >
             <Icon  
               as={BsStarFill} 
@@ -40,11 +43,13 @@ export const Header = () => {
               h='15px' 
               textShadow='1px solid #FFF3B0' 
               color='#000000'
+              mb='3px'
             />
             <Text 
               textStyle='h3' 
               textShadow='1px 1px #FFF3B0' 
               ml='10px'
+              
             >
               Favoritos
             </Text>
@@ -58,9 +63,9 @@ export const Header = () => {
           position='absolute' 
           top='150'
         >
-          Selecione seu personagem
+          { pathname === '/' ? 'Selecione seu personagem' : 'Personagens Favoritos' }
         </Text>
-        <Search />
+        { pathname !== '/favorites' && <Search />}
       </Flex>
 
     </Box>

@@ -1,10 +1,7 @@
-import { Avatar, VStack, Text, HStack, Button } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
+import { Avatar, VStack, Text, HStack, Button, GridItem } from "@chakra-ui/react"
 import { BsStarFill } from "react-icons/bs"
-import { useFavorites } from "../../../context/FavoritesContext"
-import { useSearch } from "../../../context/SearchContext"
+import { useFavorites } from "../../context/FavoritesContext"
 
-import { api } from "../../../services/api"
 
 interface CharacterProps {
   gender: string;
@@ -28,14 +25,13 @@ interface CardProps{
 
 export function Card( {data}: CardProps ) {
 
-  
-
   const { addUserFavorites } = useFavorites()
 
   return(
     <>
       {data.map((character: CharacterProps)=> (
-        <VStack 
+        <GridItem m='0 auto'>
+          <VStack 
           bg='#ffffff' 
           align='center' 
           w='270px' 
@@ -74,6 +70,7 @@ export function Card( {data}: CardProps ) {
         </Button>
 
       </VStack>
+        </GridItem>
       ))}
     
     </>

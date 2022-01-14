@@ -16,18 +16,18 @@ export const theme = extendTheme({
       fontFamily: 'Creepster',
       letterSpacing: '2px',
       color: '#000000',
-      fontSize: '48px',
+      fontSize: ['1.2rem','2rem','48px'],
       textShadow: ' 0.1rem 0.1rem #FFF3B0'
     },
     h2:{
       fontFamily:'Slackey',
       color: '#F5FEFF',
-      fontSize: '38px',
+      fontSize: ['1rem','1.6rem','38px'],
       textAlign: 'center',
     },
     h3:{
       fontFamily: 'Balsamiq Sans',
-      fontSize: '16px',
+      fontSize: ['0.7rem','16px'],
       color: '#000000',
     },
     h4:{

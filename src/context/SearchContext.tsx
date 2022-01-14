@@ -1,6 +1,5 @@
-import axios, { AxiosResponse } from "axios";
-import { createContext, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
-import { Router, useParams } from "react-router-dom";
+import { AxiosResponse } from "axios";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 
 interface SearchNameProviderProps {

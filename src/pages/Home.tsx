@@ -1,7 +1,7 @@
 import { Header } from "../components/Header";
-import { Container } from "../components/Home/Container";
+import { Container } from "../components/Container";
 
-export function HomePage() {
+export function Home () {
   return(
     <>
       <Header />
